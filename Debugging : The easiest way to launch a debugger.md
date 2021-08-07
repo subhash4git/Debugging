@@ -108,7 +108,7 @@ bool AttachDebugger()
             }
         }
     }
-    return true;
+    return bStatus;
 }
 
 // Forward declarations of functions included in this code module:

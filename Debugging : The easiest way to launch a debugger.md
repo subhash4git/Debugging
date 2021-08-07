@@ -30,7 +30,7 @@ So whenever the application start or the entry point function is called the debu
 This will save most of your time and allow you to debug your startup codes in any complex systems with many applications.
 Make sure you annotated the call with #if DEBUG to run the code only in debug mode.
 
-[DOWNLOAD THE FULL SAMPLE HERE](https://github.com/subhash4git/Debugging/LaunchDebugger_DotNet(CSharp).zip)
+[DOWNLOAD THE FULL SAMPLE HERE](https://github.com/subhash4git/Debugging/raw/master/LaunchDebugger_DotNet(CSharp).zip)
 
 
 ```C#
@@ -54,7 +54,7 @@ Make sure you annotated the call with #if DEBUG to run the code only in debug mo
 Call the API - 'AttachDebugger()'.
 Prerequisite - Visual studio debugger should be installed in the machine. 
 
-[DOWNLOAD THE FULL SAMPLE HERE](https://github.com/subhash4git/Debugging/LaunchDebugger_Win32(C++).zip)
+[DOWNLOAD THE FULL SAMPLE HERE](https://github.com/subhash4git/Debugging/raw/master/LaunchDebugger_Win32(C++).zip)
 ```C++
 bool RunDebugger(TCHAR* szPath)
 {

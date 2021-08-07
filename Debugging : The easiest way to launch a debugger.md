@@ -4,6 +4,7 @@
 #### **Introduction**
 Debugging is always a difficult process when we are debugging a complex system involving many applications . It makes
 more difficult if we are not sure at what time these applicatiions are started and ended.
+
 In such situations , Normally we attach the debugger to the process directly using the Process ID . Each debugger has different methods for attaching to the debugger. The more easiest method is by using Visual studio you can attach the process directly and start debugging . 
 
 These method are works fine in most of the cases but the method has following problems and does not cover all the scenarios.
@@ -48,7 +49,7 @@ Make sure you annotated the call with #if DEBUG to run the code only in debug mo
 ```
 
 #### **Method 2 - Lauch a Debugger in Win32(C++)**
-In Win32 based C++ , There is no direct Debug API availble to attach the current running process to debugger.
+In Win32 based C++ , There is no direct Debug API available to attach the current running process to debugger.
 The following code snippet will attach the current process to Visual Studio JIT debugger.
 Make sure you annotated the call with #if DEBUG to run the code only in debug mode.
 Call the API - 'AttachDebugger()'.

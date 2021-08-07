@@ -29,6 +29,10 @@ the following code snippet in your 'main()'. You can even use in your assemblies
 So whenever the application start or the entry point function is called the debugger is start running stright away.
 This will save most of your time and allow you to debug your startup codes in any complex systems with many applications.
 Make sure you annotated the call with #if DEBUG to run the code only in debug mode.
+
+[DOWNLOAD THE FULL SAMPLE HERE](https://github.com/subhash4git/Debugging/LaunchDebugger_DotNet(CSharp).zip)
+
+
 ```C#
         static void Main(string[] args)
         {
@@ -49,6 +53,8 @@ The following code snippet will attach the current process to Visual Studio JIT 
 Make sure you annotated the call with #if DEBUG to run the code only in debug mode.
 Call the API - 'AttachDebugger()'.
 Prerequisite - Visual studio debugger should be installed in the machine. 
+
+[DOWNLOAD THE FULL SAMPLE HERE](https://github.com/subhash4git/Debugging/LaunchDebugger_Win32(C++).zip)
 ```C++
 bool RunDebugger(TCHAR* szPath)
 {

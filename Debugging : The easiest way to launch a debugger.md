@@ -3,32 +3,32 @@
 
 #### **Introduction**
 Debugging is always a difficult process when we are debugging a complex system involving many applications . It makes
-more difficult if we are not sure at what time these applicatiions are started and ended.
+more difficult if we are not sure at what time these applications are started and ended.
 
-In such situations , Normally we attach the debugger to the process directly using the Process ID . Each debugger has different methods for attaching to the debugger. The more easiest method is by using Visual studio you can attach the process directly and start debugging . 
+In such situations , Normally we attach the debugger to the process directly using the Process ID . Each debugger has different methods for attaching to the debugger. The easiest method is by using Visual studio you can attach the process directly and start debugging . 
 
-These method are works fine in most of the cases but the method has following problems and does not cover all the scenarios.
+These methods work fine in most of the cases but the method has following problems and does not cover all the scenarios.
 
 #### **Scenario 1 - To debug the startup code of the application.**
-It is difficult to debug the startup code an application like 'WinMain() or main()' becouse these codes are already 
-executed when try to attach the debugger. Another example is to debug the startup code of a Win32 service - 'ServiceMain()'.
+It is difficult to debug the startup code an application like 'WinMain() or main()' because these codes are already 
+executed when trying to attach the debugger. Another example is to debug the startup code of a Win32 service - 'ServiceMain()'.
 We always need our debugger should be attached to the process right from startup code (WinMain() | main() | ServiceMain()).
 
 #### **Scenario 2 - To debug the entry point function of an assembly or DLL.**
-It is also difficult to debug an assembly or DLL entry point function when we are not sure at what time our entry point function called or which process load entry point function. 
+It is also difficult to debug an assembly or DLL entry point function when we are not sure at what time our entry point function is called or which process loads the entry point DLL. 
 
 #### **Problem  1 - Attaching the debugger to a running process will kill most of your time.**
-There is cost of time to attach the debugger to the running process and it may affect your productivity.
+There is a cost of time to attach the debugger to the running process and it may affect your productivity.
 
-Please use following solution to solve these issues and handle the scenarios while debugging.
+Please use the following solution to solve these issues and handle the scenarios while debugging.
 
 #### **SOLUTION**
 
 #### **Method 1 - Launch Debugger in .Net(C#)**
-Infact its very easy in Dot Net based application . You can launch and attach the debugger stright away by running
-the following code snippet in your 'main()'. You can even use in your assemblies entry point function. 
-So whenever the application start or the entry point function is called the debugger is start running stright away.
-This will save most of your time and allow you to debug your startup codes in any complex systems with many applications.
+Infact its very easy in Dot Net based applications . You can launch and attach the debugger straight away by running
+the following code snippet in your 'main()'. You can even use it in your assembly's entry point function. 
+So whenever the application starts or the entry point function is called the debugger starts running straight away.
+This will save most of your time and allow you to debug your startup codes in any complex system with many applications.
 Make sure you annotated the call with #if DEBUG to run the code only in debug mode.
 
 [DOWNLOAD THE FULL SAMPLE HERE](https://github.com/subhash4git/Debugging/raw/master/LaunchDebugger_DotNet(CSharp).zip)
@@ -48,7 +48,7 @@ Make sure you annotated the call with #if DEBUG to run the code only in debug mo
         }
 ```
 
-#### **Method 2 - Lauch a Debugger in Win32(C++)**
+#### **Method 2 - Launch a Debugger in Win32(C++)**
 In Win32 based C++ , There is no direct Debug API available to attach the current running process to debugger.
 The following code snippet will attach the current process to Visual Studio JIT debugger.
 Make sure you annotated the call with #if DEBUG to run the code only in debug mode.
